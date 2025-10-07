@@ -10,10 +10,10 @@ public class HomePage {
     WebElement cartLink;
     WebElement loginLink;
     WebElement signupLink;
-
+    //Softexpert2000
 
     HomePage(){
-        homeLink =
+        //homeLink =
     }
 
 
