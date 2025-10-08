@@ -7,13 +7,15 @@ import org.openqa.selenium.WebElement;
 import java.util.Objects;
 
 public class DemoBlaze {
-    WebDriver driver;
+    WebDriver driver = new ChromeDriver();
     WebElement loginLink;
     WebElement username;
     WebElement password;
+    String baseURL  = "https://demoblaze.com/";
+
     
     DemoBlaze(){
-        driver = new ChromeDriver();
+        driver.get(baseURL);
         loginLink = driver.findElement(By.id("login2"));
         username = driver.findElement(By.id("login2"));
         password = driver.findElement(By.id("loginpassword"));
@@ -26,9 +28,6 @@ public class DemoBlaze {
 
     @Test
     public void testGoogleSearch(){
-        String baseURL = "https://demoblaze.com/";
-        driver.get(baseURL);
-
         assert Objects.requireNonNull(driver.getTitle()).toLowerCase().contains("store");
     }
 
